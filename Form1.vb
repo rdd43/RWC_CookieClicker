@@ -2,6 +2,7 @@
     'global variable
     Public totalCookies, ClickValue, ClickLevel As Integer
     Public PassiveOneVal, PassiveOneLevel As Integer
+    Public direction As Integer
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         totalCookies = 0
         ClickValue = 1
@@ -9,6 +10,10 @@
 
         PassiveOneVal = 0
         PassiveOneLevel = 1
+
+        'Edit
+
+        direction = 1
         'comment in visual basic
         'Private Sub means funciton
         'Form1_Load just means when you start the program
@@ -18,6 +23,7 @@
         '1000 is once a second
         '100 is 1/10 of a second
         PassiveCookieTimer.Start()
+        AnimationTimer.Start()
     End Sub
 
     Private Sub btn_cookie_click_Click(sender As Object, e As EventArgs) Handles btn_cookie_click.Click
@@ -35,6 +41,20 @@
     Private Sub PassiveCookieTimer_Tick(sender As Object, e As EventArgs) Handles PassiveCookieTimer.Tick
         totalCookies = totalCookies + PassiveOneVal
         Cookie_Value.Text = "Cookies: " + totalCookies.ToString
+    End Sub
+
+    Private Sub AnimationTimer_Tick(sender As Object, e As EventArgs) Handles AnimationTimer.Tick
+        If RoundButton1.Location.Y > 300 Then
+            direction = direction * -1
+        ElseIf RoundButton1.Location.Y < 250 Then
+            direction = direction * -1
+        End If
+        RoundButton1.Text = RoundButton1.Location.Y.ToString
+        RoundButton1.Location = New Point(RoundButton1.Location.X, RoundButton1.Location.Y + direction)
+    End Sub
+
+    Private Sub RoundButton1_Click(sender As Object, e As EventArgs) Handles RoundButton1.Click
+
     End Sub
 
     'helper function

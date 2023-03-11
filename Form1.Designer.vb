@@ -33,6 +33,7 @@ Partial Class CookieClicker
         Me.lbl_Click_Upgrade_Cost = New System.Windows.Forms.Label()
         Me.lbl_Passive_One_Upgrade_Cost = New System.Windows.Forms.Label()
         Me.RoundButton1 = New FirstProject.RoundButton()
+        Me.AnimationTimer = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'btn_cookie_click
@@ -123,12 +124,16 @@ Partial Class CookieClicker
         '
         'RoundButton1
         '
-        Me.RoundButton1.Location = New System.Drawing.Point(382, 253)
+        Me.RoundButton1.Location = New System.Drawing.Point(382, 250)
         Me.RoundButton1.Name = "RoundButton1"
         Me.RoundButton1.Size = New System.Drawing.Size(198, 162)
         Me.RoundButton1.TabIndex = 8
         Me.RoundButton1.Text = "RoundButton1"
         Me.RoundButton1.UseVisualStyleBackColor = True
+        '
+        'AnimationTimer
+        '
+        Me.AnimationTimer.Interval = 20
         '
         'CookieClicker
         '
@@ -162,4 +167,5 @@ Partial Class CookieClicker
     Friend WithEvents lbl_Click_Upgrade_Cost As Label
     Friend WithEvents lbl_Passive_One_Upgrade_Cost As Label
     Friend WithEvents RoundButton1 As RoundButton
+    Friend WithEvents AnimationTimer As Timer
 End Class
