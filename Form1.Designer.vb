@@ -32,11 +32,12 @@ Partial Class CookieClicker
         Me.lbl_Passive_One_Level = New System.Windows.Forms.Label()
         Me.lbl_Click_Upgrade_Cost = New System.Windows.Forms.Label()
         Me.lbl_Passive_One_Upgrade_Cost = New System.Windows.Forms.Label()
+        Me.RoundButton1 = New FirstProject.RoundButton()
         Me.SuspendLayout()
         '
         'btn_cookie_click
         '
-        Me.btn_cookie_click.Location = New System.Drawing.Point(346, 353)
+        Me.btn_cookie_click.Location = New System.Drawing.Point(617, 121)
         Me.btn_cookie_click.Name = "btn_cookie_click"
         Me.btn_cookie_click.Size = New System.Drawing.Size(321, 105)
         Me.btn_cookie_click.TabIndex = 0
@@ -120,12 +121,22 @@ Partial Class CookieClicker
         Me.lbl_Passive_One_Upgrade_Cost.Text = "Price: 10"
         Me.lbl_Passive_One_Upgrade_Cost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'RoundButton1
+        '
+        Me.RoundButton1.Location = New System.Drawing.Point(382, 253)
+        Me.RoundButton1.Name = "RoundButton1"
+        Me.RoundButton1.Size = New System.Drawing.Size(198, 162)
+        Me.RoundButton1.TabIndex = 8
+        Me.RoundButton1.Text = "RoundButton1"
+        Me.RoundButton1.UseVisualStyleBackColor = True
+        '
         'CookieClicker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.ClientSize = New System.Drawing.Size(982, 470)
+        Me.Controls.Add(Me.RoundButton1)
         Me.Controls.Add(Me.lbl_Passive_One_Upgrade_Cost)
         Me.Controls.Add(Me.lbl_Click_Upgrade_Cost)
         Me.Controls.Add(Me.lbl_Passive_One_Level)
@@ -150,4 +161,5 @@ Partial Class CookieClicker
     Friend WithEvents lbl_Passive_One_Level As Label
     Friend WithEvents lbl_Click_Upgrade_Cost As Label
     Friend WithEvents lbl_Passive_One_Upgrade_Cost As Label
+    Friend WithEvents RoundButton1 As RoundButton
 End Class
