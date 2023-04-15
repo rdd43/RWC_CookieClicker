@@ -34,6 +34,8 @@ Partial Class CookieClicker
         Me.lbl_Passive_One_Upgrade_Cost = New System.Windows.Forms.Label()
         Me.RoundButton1 = New FirstProject.RoundButton()
         Me.AnimationTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.btn_SwapToForm2 = New System.Windows.Forms.Button()
+        Me.btn_SwapToForm3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btn_cookie_click
@@ -135,12 +137,32 @@ Partial Class CookieClicker
         '
         Me.AnimationTimer.Interval = 20
         '
+        'btn_SwapToForm2
+        '
+        Me.btn_SwapToForm2.Location = New System.Drawing.Point(882, 383)
+        Me.btn_SwapToForm2.Name = "btn_SwapToForm2"
+        Me.btn_SwapToForm2.Size = New System.Drawing.Size(88, 75)
+        Me.btn_SwapToForm2.TabIndex = 9
+        Me.btn_SwapToForm2.Text = "Form 2"
+        Me.btn_SwapToForm2.UseVisualStyleBackColor = True
+        '
+        'btn_SwapToForm3
+        '
+        Me.btn_SwapToForm3.Location = New System.Drawing.Point(788, 383)
+        Me.btn_SwapToForm3.Name = "btn_SwapToForm3"
+        Me.btn_SwapToForm3.Size = New System.Drawing.Size(88, 75)
+        Me.btn_SwapToForm3.TabIndex = 10
+        Me.btn_SwapToForm3.Text = "Form 3"
+        Me.btn_SwapToForm3.UseVisualStyleBackColor = True
+        '
         'CookieClicker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.ClientSize = New System.Drawing.Size(982, 470)
+        Me.Controls.Add(Me.btn_SwapToForm3)
+        Me.Controls.Add(Me.btn_SwapToForm2)
         Me.Controls.Add(Me.RoundButton1)
         Me.Controls.Add(Me.lbl_Passive_One_Upgrade_Cost)
         Me.Controls.Add(Me.lbl_Click_Upgrade_Cost)
@@ -168,4 +190,6 @@ Partial Class CookieClicker
     Friend WithEvents lbl_Passive_One_Upgrade_Cost As Label
     Friend WithEvents RoundButton1 As RoundButton
     Friend WithEvents AnimationTimer As Timer
+    Friend WithEvents btn_SwapToForm2 As Button
+    Friend WithEvents btn_SwapToForm3 As Button
 End Class

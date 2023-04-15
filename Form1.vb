@@ -3,13 +3,16 @@
     Public totalCookies, ClickValue, ClickLevel As Integer
     Public PassiveOneVal, PassiveOneLevel As Integer
     Public direction As Integer
+    Public AchievementStatus As Boolean
+    Public totalClicks As Integer
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         totalCookies = 0
         ClickValue = 1
         ClickLevel = 1
-
+        AchievementStatus = False
         PassiveOneVal = 0
         PassiveOneLevel = 1
+        totalClicks = 0
 
         'Edit
 
@@ -53,8 +56,22 @@
         RoundButton1.Location = New Point(RoundButton1.Location.X, RoundButton1.Location.Y + direction)
     End Sub
 
-    Private Sub RoundButton1_Click(sender As Object, e As EventArgs) Handles RoundButton1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_SwapToForm2.Click
+        Dim form2 As New Form2()
+        form2.Show()
+        Me.Visible = False
+    End Sub
 
+    Private Sub btn_SwapToForm3_Click(sender As Object, e As EventArgs) Handles btn_SwapToForm3.Click
+
+    End Sub
+
+    Private Sub RoundButton1_Click(sender As Object, e As EventArgs) Handles RoundButton1.Click
+        totalClicks = totalClicks + 1
+        If totalClicks >= 10 Then
+            AchievementStatus = True
+        End If
+        cookie_click()
     End Sub
 
     'helper function
